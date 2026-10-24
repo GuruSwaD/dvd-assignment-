@@ -2,8 +2,8 @@
 
 | | |
 |---|---|
-| **Name** | `<NAME>` |
-| **Roll number** | `<ROLL_NUMBER>` |
+| **Authors** | Guru Shwadeep Dornadula — 2023112020<br>Sudershan Sarraf — 2023102015 |
+| **Hand-worked examples** | 2023112020 → A = 0 + 5 = 5, B = 7 (P = 35); 2023102015 → A = 5 + 5 = 10, B = 7 (P = 70) |
 | **Design** | `mult_array`: 4-bit × 4-bit unsigned array multiplier, registered inputs and output (latency 2 cycles) |
 | **Technology** | SkyWater SKY130, `sky130_fd_sc_hd`, typical corner `tt_025C_1v80` |
 
