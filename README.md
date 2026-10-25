@@ -139,4 +139,9 @@ timing-driven: with a longer period they pick smaller, slower cells, so the slow
 grew with the period. Final submission files: `pnr/metrics.json` and `pnr/mult_array.gds` from
 `RUN_2026-10-23_21-38-16/final/`, with `CLOCK_PERIOD = 6.5` in `pnr/config.json`.
 
+In the final metrics, the +3.429 ns typical-corner figure is for `nom_tt_025C_1v80`.
+The overall worst setup slack is +0.499 ns, giving `1000 / (6.5 - 0.499)` = 166.6 MHz.
+Zero DRC/LVS errors and positive setup slack do not imply that every electrical limit passes:
+`design__max_slew_violation__count` is 11, as discussed in the report.
+
 The `runs/` folder is not committed (see `.gitignore`).
