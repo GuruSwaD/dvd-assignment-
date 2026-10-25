@@ -68,6 +68,10 @@ vvp sim                      # PASS: 256 vectors checked, 0 errors
 gtkwave mult.vcd
 ```
 
+The testbench changes inputs on a falling edge. The next rising edge captures `a` and `b`,
+and the following rising edge captures their product into `p`; the comparison runs on the next
+falling edge. Asserting `rst_n = 0` clears both the input registers and `p` asynchronously.
+
 Error-injection test (task 6): `assign sum = a ^ b ^ cin;` in `rtl/full_adder.v` was temporarily changed to
 `assign sum = a ^ b;`, the same two commands were run, and the testbench printed
 
