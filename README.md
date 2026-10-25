@@ -105,6 +105,10 @@ PERIOD=2.98 sta sta/sta.tcl        # worst slack max -0.003 (≈ 0, confirms T_m
 sta sta/sta.tcl                    # re-run at 10 ns so sta/mult_array_timing.rpt is the T = 10 ns report
 ```
 
+Each invocation overwrites `sta/mult_array_timing.rpt`, including a run with `PERIOD` set.
+The final command restores the default 10 ns report after checking the minimum period.
+The frequency calculation uses nanoseconds: `F_max (MHz) = 1000 / T_min (ns)`.
+
 ## Part D — Physical design (LibreLane)
 
 ```bash
